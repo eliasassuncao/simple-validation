@@ -19,7 +19,7 @@ class Validator {
     }
 
     validaCpf(cpf) {
-        if(/\d{3}\.\d{3}\.\d{3}-\d{2}/.test(cpf)){
+        if(/\d{3}\.\d{3}\.\d{3}-\d{2}$/.test(cpf)){
             console.log("CPF valido");
             this._mensagemCpf = "CPF validado com sucesso";
         }else {
@@ -29,7 +29,7 @@ class Validator {
     }
 
     validaData(data){
-        if(/\d{1,2}\/\d{1,2}\/\d{4}/.test(data)){
+        if(/\d{1,2}\/\d{1,2}\/\d{4}$/.test(data)){
             console.log("Data valida");
             this._mensagemData = "Data validada com sucesso";
         }else {
@@ -39,7 +39,7 @@ class Validator {
     }
 
     validaTelefone(telefone){
-        if(/\(\d{2}\)\d{4,5}\-\d{4}/.test(telefone)) {
+        if(/\(\d{2}\)\d{4,5}\-\d{4}$/.test(telefone)) {
             console.log("Telefone valido");
             this._mensagemTel = "Telefone validado com sucesso";
         }else {
